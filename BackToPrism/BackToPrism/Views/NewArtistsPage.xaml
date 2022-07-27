@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BackToPrism.Views.NewArtistsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" 
+                     Command="{Binding SaveCommand}"
+                     CommandParameter="{Binding SelectedItem,Source={x:Reference artistsListView}}"
+                     >
+            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="artistSearchBar"
+                Placeholder="Search Record Label, Artist or Track Title"
+                       SearchCommand="{Binding SearchCommand}"
+                       SearchCommandParameter="{Binding Text,Source={x:Reference artistSearchBar}}"/>
+            <ListView x:Name="artistsListView"
+                      ItemsSource="{Binding SearchResults}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BackToPrism.Views.ArtistsDetailsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Label FontSize="25"
+               FontAttributes="Bold" Text="{Binding ArtistName}"></Label>
+        <!--<Label FontSize="20"
+               TextColor="Silver"></Label>
+        <Label FontSize="2515"
+                TextColor="Green"></Label>-->
+    </ContentPage.Content>
+</ContentPage>
